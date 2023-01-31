@@ -1,18 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int n, cnt=0;
+    int n, cnt=0, x;
     cin >> n;
-    vector<vector<int> > graph(n+1, vector<int>(n+1));
-    for(int u=1; u <= n; u++)
+    vector<pair<int, int> > edges;
+    for(int u=1; u <= n; u++){
         for(int v=1; v <= n; v++){
-            cin >> graph[u][v];
-            if(graph[u][v]) cnt ++;
+            cin >> x;
+            if(x==1) edges.push_back({u, v});
         }
-    cout << n << ' ' << cnt << '\n';
-    for(int u=1; u <= n; u++)
-        for(int v=1; v <= n; v++)
-            if(graph[u][v]) cout << u << ' ' << v << '\n';
+    }
+    cout << n << ' ' << edges.size();
+    for(auto edge: edges)
+        cout << '\n' << edge.first << ' ' << edge.second;
+    
     return 0;
 
 }
