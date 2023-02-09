@@ -19,6 +19,8 @@ int main(){
     cin >> a >> b;
     int val = prefix(b+'#'+a);
     int k=0;
-    while(k < a.size() && a[k] < b[b.size() - k]) k++;
-
+    while(k < a.size() && a[k] == b[b.size() - k - 1]) k++;
+    if(k + val < a.size() || a.size() != b.size()) cout << "No" << endl;
+    else cout << "Yes\n" << a.size() - val << endl;
+    return 0;
 }
