@@ -1,10 +1,40 @@
-.exe
-.o
-Solution of olympiad tasks/Data Structures/Sqrt decomposition/main
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
 .vscode/settings.json
 .gitignore
+Solution of olympiad tasks/Graph theory - 1/Breadth first search (BFS)/main
 Solution of olympiad tasks/long arithmetic/Addition and subtraction/main
-temp.cpp
+.gitignore
+temp
 temp.py
 Solution of olympiad tasks/C++ Standard Template Library/Permutations/main
-Solution of olympiad tasks/Graph theory - 1/Breadth first search (BFS)/main
