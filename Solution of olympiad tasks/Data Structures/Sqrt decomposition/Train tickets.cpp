@@ -57,23 +57,24 @@ int get_max(int l, int r){
     int L = l/sqrt_n, R = r/sqrt_n;
     int res = 0;
     if(L == R){
-        if(isStart(l) && isEnd(r)) return b[l];
+        if(isStart(l) && isEnd(r)) return b[L];
         for(int i = l; i <= r; i++) res = max(res, a[i] + c[L]);
         return res;
     }
     if(!isStart(l)){
         for(int i = l, j = (L+1) * sqrt_n; i < j; i++)  res = max(res, a[i] + c[L]);
-        L--;
+        L++;
     }
     if(!isEnd(r)){
-        for(int i = R * sqrt_n; i <= r; i++)  res = max(res, a[i] + c[L]);
-        R++;
+        for(int i = R * sqrt_n; i <= r; i++)  res = max(res, a[i] + c[R]);
+        R--;
     }
     for(int i = L; i <= R; i++) res = max(res, b[i]);
     return res;
 }
 
 int main(){
+    ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
     int n, k, m;
     cin >> n >> k >> m;
     a.resize(n);
