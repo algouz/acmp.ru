@@ -6,16 +6,7 @@ using namespace std;
 
 int main()
 {
-	set<int> a;
-	int n;
-	string s;
-	cin >> n;
-	vector<int> a;
-	for(int i=0; i < n; i++){
-		cin >> s;
-		for(char &x: s) x = tolower(x);
-		cout << (s == "yes" ? "YES" : "NO");
-		cout << '\n';
-	}
-	return 0;
+	string s = "1234";
+	cout << s.substr(1) + s[0] << endl;
+	cout << s.back() + s.substr(0, 3);
 }
