@@ -31,10 +31,10 @@
 *.out
 *.app
 .vscode/settings.json
-.gitignore
 Solution of olympiad tasks/Graph theory - 1/Breadth first search (BFS)/main
 Solution of olympiad tasks/long arithmetic/Addition and subtraction/main
 .gitignore
 temp
 temp.py
 Solution of olympiad tasks/C++ Standard Template Library/Permutations/main
+main.*

@@ -1,23 +1,21 @@
-#include <vector>
 #include <iostream>
+#include <vector>
+#include <map>
+#include <set>
 using namespace std;
 
-int main(){
-  	ios::sync_with_stdio(false);
-  	cin.tie(nullptr);
-  	cout.tie(nullptr);
-    int n, q, l, r, x;
-    cin >> n >> q;
-    vector<long long> b(n+2);
-    for(int Q = 0; Q < q; Q++){
-            cin >> l >> r >> x;
-            b[l] += x;
-            b[r+1] -= x;
-        }
-  		long long z = 0;
-        for(int i = 1; i <= n; i++){
-            z = z + b[i];
-          	cout << z << ' ';
-        }
-    return 0;
+int main()
+{
+	set<int> a;
+	int n;
+	string s;
+	cin >> n;
+	vector<int> a;
+	for(int i=0; i < n; i++){
+		cin >> s;
+		for(char &x: s) x = tolower(x);
+		cout << (s == "yes" ? "YES" : "NO");
+		cout << '\n';
+	}
+	return 0;
 }
